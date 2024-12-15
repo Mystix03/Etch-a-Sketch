@@ -1,0 +1,22 @@
+:root {
+    --dynamic-value: 16;
+
+}
+
+
+.grid-container {
+    display: flex;              /* Use Flexbox for layout */
+    flex-wrap: wrap;            /* Allow wrapping to form rows */
+    width: 400px;               /* Set container width */
+    height: 400px;              /* Set container height */
+    border: 1px solid black;    /* Optional: border for container visibility */
+  }
+  
+  .grid-container .item {
+    flex: 1 0 calc(100% / var(--dynamic-value));  
+    aspect-ratio: 1; 
+    /* flex-shrink: 1;           Make each div a square */
+    border: 1px solid gray;     /* Optional: for square visibility */
+    box-sizing: border-box;     /* Include borders in width/height */
+  }
+  
